@@ -14,3 +14,15 @@ Reload every 2 minutes, 15 seconds after the minute: 6:00:15, 6:02:15, 6:04:15, 
 ```
 <script>scheduleReload(120000, 15000);</script> 
 ```
+
+The server must also serve headers to instruct the browser to not use cached copies
+for XHR or reload. These configs can be added to the `.htaccess` file in the root 
+of your web app if your Apache server allows it:
+```
+Header set Access-Control-Allow-Origin "*"
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault A0
+</IfModule>
+```
