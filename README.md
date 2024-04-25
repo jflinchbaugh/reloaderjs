@@ -3,7 +3,7 @@
 This is a small script to schedule page reload in a given number of milliseconds
 truncated to the top of the nearest minutes, then delayed by so many milliseconds.
 Importantly, this script only does the reload if the server is available. When 
-offline (either client or server), the pages is not reloaded.
+offline (either client or server), the page is not reloaded.
 
 Maybe some examples are in order:
 
